@@ -10,30 +10,32 @@
         <div class='contact-box'>
             <div class='contact-left'>
                 <h3>Send your request</h3>
-                <form action="https://formsubmit.co/samthafsprojects@gmail.com" method="POST">
+                <form action = '' method = 'POST'>
+                    {%csrf_token%}
+                    
                     <div class='input-row'>
                         <div class='input-group'>
                             <label> Name </label>
-                            <input type='text' placeholder='John Doe' name='Name' required/>
+                            <input type='text' placeholder='John Doe' name='name' id='name' required/>
                         </div>
                         <div class='input-group'>
                             <label> Phone No. </label>
-                            <input type='text' placeholder='08037039664' name='Phone Number' required/>
+                            <input type='text' placeholder='08037039664' name='phone'  required/>
                         </div>
                     </div>
                     <div class='input-row'>
                         <div class='input-group'>
                             <label> Email Address </label>
-                            <input type='email' placeholder='samthafsprojects@gmail.com' name='Email' required/>
+                            <input type='email' placeholder='samthafsprojects@gmail.com' name='email'  required/>
                         </div>
                         <div class='input-group'>
                             <label> Subject </label>
-                            <input type='text' placeholder='What are you inquiring about?' name='Subject' required/>
+                            <input type='text' placeholder='What are you inquiring about?' name='subject'  required/>
 
                         </div>
                     </div>
                     <label>Your message</label>
-                    <textarea rows='5' placeholder='Your Message' name='Message' required></textarea>
+                    <textarea rows='5' placeholder='Your Message' name='message'  required></textarea>
                     <button type='submit'>Send</button>
                 </form>
             </div>
@@ -56,6 +58,7 @@
             </div>
         </div>
     </div>
+    
 
 </div>
 <style>
@@ -220,4 +223,5 @@
     }
 
 </style>
+
 {%endblock%}
